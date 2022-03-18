@@ -6,11 +6,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WeatherApiService {
 
-  key:string = '73ab6751bd324601b05fe39a8711729e';
+  key:string = '1dd1e4e8a38f4d40a1f142730221803';
   constructor(private http: HttpClient) { }
 
   getData(){
-    let url="https://api.weatherbit.io/v2.0/current?city=Jerusalem&country=il&key=73ab6751bd324601b05fe39a8711729e";
+    let url="https://api.weatherapi.com/v1/forecast.json?key=1dd1e4e8a38f4d40a1f142730221803&q=tel aviv&days=5&aqi=no&alerts=no";
     return this.http.get(url);
   }
 }

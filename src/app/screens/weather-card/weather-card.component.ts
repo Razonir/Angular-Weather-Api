@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TwitterService } from 'src/app/services/twitter.service';
 import { WeatherApiService } from 'src/app/services/weather-api.service';
 
 @Component({
@@ -8,15 +9,29 @@ import { WeatherApiService } from 'src/app/services/weather-api.service';
 })
 export class WeatherCardComponent implements OnInit {
 
-  data:any;
-  constructor(private weatherApi:WeatherApiService) {
 
-    this.weatherApi.getData().subscribe(data=>{
+
+
+  
+  data:any;
+  weather:any;
+  
+  constructor( private twitterApi:TwitterService ,private weatherApi:WeatherApiService) {
+    this.twitterApi.getTwitts().subscribe(data=>{
       console.log(data);
       this.data = data;
     })
+
+    this.weatherApi.getData().subscribe(weather=>{
+      console.log(weather);
+      this.weather = weather;
+      
+    })
+    
   }
   ngOnInit(): void {
   }
 
+
+  
 }

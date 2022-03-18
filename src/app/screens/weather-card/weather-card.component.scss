@@ -1,11 +1,22 @@
+
 .bigcard{
     background-color: white;
     margin: 50px auto;
     width: 1000px;
     border-radius: 12px;
+    transition: 0.5s;
     height: 500px;
+    filter: drop-shadow(0 30px 20px rgba(0, 0, 0, 0.1));
+
     @media only screen and(max-width: 1000px) {
         width: 500px;
+        .card{
+            .temp{
+                font-size: 25px !important;
+            }.description,.day{
+                font-size: 10px !important;
+            }
+        }
     }
     @media only screen and(max-width: 500px) {
         width: 95%;
@@ -24,6 +35,11 @@
             .tag{
                 margin-top: 2px !important;
             }
+            &:hover{
+                .content{
+                    color: black !important;
+                }
+            }
         }
         .twitts{
             margin-top: 2 !important;
@@ -35,6 +51,7 @@
             .content{
                 font-size: 10px;
             }
+
         }
         .right{
             .temp{
@@ -169,6 +186,12 @@
                             background: rgb(197, 197, 197);
                         }
                     }
+                    &:hover{
+                        color: black;
+                        .circle{
+                            background: rgb(167, 167, 167) !important;
+                        }
+                    }
             }
             .next{
                 text-align: center;
@@ -186,27 +209,53 @@
             font-size: 20px;
             display: flex;
             height: 70%;
-            align-items: center;
-            justify-content: space-evenly;
+            align-items: flex-start;           
+             justify-content: space-evenly;
             padding-left: 10px;
             .card{
                 text-align: center;
+                cursor: default !important;
+                transition: 0.5s;
+                .img{
+                    transition: 0.5s;
 
+                }
                 .description{
                     font-size: 17px;
                 }
-            }
-            .temp{
-                font-size: 50px;
-                &::after{
-                    content: 'O';
-                    color: rgb(49, 49, 49);
-                    font-size: 10px;
-                    position: absolute;
-                    margin-left: 2px;
-                    margin-top: 4px;
+                .temp{
+                    font-size: 50px;
+                    &::after{
+                        content: 'O';
+                        color: rgb(49, 49, 49);
+                        font-size: 10px;
+                        position: absolute;
+                        margin-left: 2px;
+                        margin-top: 4px;
+                    }
+                }
+                &:hover{
+                    transform: scale(1.05);
+                    color: black;
+                    img{
+                        animation: rotateX linear 1.5s infinite alternate;
+                    }
+                    .description,.temp,.day{
+                        filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.150));
+                    }
                 }
             }
+            
         }
     }
+    &:hover{
+        filter: drop-shadow(0 30px 20px rgba(0, 0, 0, 0.250));
+    }
 }
+@keyframes rotateX {
+    0% {transform: rotate(0deg) scale(1);}
+    33% {transform: rotate(10deg) scale(1.2) translateY(5px); }
+    66% {transform: rotate(-10deg) scale(1.2) translateY(2px); }
+    100% {transform: rotate(0deg) scale(1);}
+  }
+  
