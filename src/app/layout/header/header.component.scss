@@ -1,0 +1,28 @@
+header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: white;
+    background: #42228d;
+    height: 40px;
+    text-align: center;
+    .menu{
+        width: 10%;
+    }
+    .logo{
+        width: 20%;
+        display: flex;
+        .img{
+            margin-right: 10px;
+        }
+    }
+    .date{
+        width: 40%;
+    }
+    .empty{
+        width: 20%;
+    }
+    .social{
+        width: 10%;
+    }
+}

@@ -1,0 +1,212 @@
+.bigcard{
+    background-color: white;
+    margin: 50px auto;
+    width: 1000px;
+    border-radius: 12px;
+    height: 500px;
+    @media only screen and(max-width: 1000px) {
+        width: 500px;
+    }
+    @media only screen and(max-width: 500px) {
+        width: 95%;
+        .top{
+            align-items: center  !important;
+            align-content: center !important;
+            flex-direction: column  !important;
+            .left{
+                margin-top: 40px;
+            }
+        }
+        .twitter{
+            .title{
+                display: none;
+            }
+            .tag{
+                margin-top: 2px !important;
+            }
+        }
+        .twitts{
+            margin-top: 2 !important;
+            padding-right: 0 ;
+            .circle{
+                width: 10px !important;
+                height: 10px !important;
+            }
+            .content{
+                font-size: 10px;
+            }
+        }
+        .right{
+            .temp{
+                font-size: 30px !important;
+        
+            }
+            .description{
+                font-size: 10px !important;
+            }
+            .day{
+                font-size: 13px;
+            }
+        }
+    }
+    .top{
+        height: 50%;
+        width: 100%;
+        background-image: url(/assets/back.png);
+        background-size: cover;
+        border-radius: 12px 12px 0 0;
+        border-bottom: 15px solid rgb(26, 20, 61);
+        display: flex;
+        align-items: flex-end;
+        .left{
+            display: table-cell;
+            vertical-align: bottom;
+            width: 50%;
+            text-align: center;
+            color: white;
+            .temp{
+                font-size: 72px;
+                transform: translateX(-5px);
+                filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.288));
+                &::after{
+                    content: 'O';
+                    color: white;
+                    font-size: 25px;
+                    position: absolute;
+                    margin-left: 5px;
+                    margin-top: 5px;
+                }
+            }
+            .description{
+                color: rgba(207, 207, 207, 0.514);
+            }
+            .twocol{
+                display: flex;
+                margin-top: 10px;
+                margin-bottom: 5px;
+                justify-content: center;
+                .one{
+                    margin: 0 5px;
+                    p,h6{
+                        color: rgba(207, 207, 207, 0.514);
+                        font-size: 20px;
+                        width: 70px;
+                    }
+                    h6{
+                        font-size: 15px;
+                        margin-bottom: 2px;
+                    }
+                }
+                .line{
+                    width: 1px;
+                    height: 40px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    background: rgba(187, 187, 187, 0.247);
+                }
+            }
+
+        }
+        .right{
+            width: 50%;
+            margin-bottom: 180px;
+            display: flex;
+            color: white;
+            flex-direction: column;
+            align-items: center;
+            .city{
+                font-size: 15px;
+                filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.322));
+                margin: 2px 0;
+                font-weight: 100;
+                letter-spacing: 4px;
+                text-transform: uppercase;
+            }
+            .line{
+                filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.158));
+                width: 50px;
+                height: 3px;
+                border-radius: 10px;
+                background-color: white;
+            }
+        }
+    }
+    .bottom{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        color: gray;
+        border-radius:0 0 12px 12px;
+        background: linear-gradient(180deg, rgb(212, 212, 212) 0%, rgb(255, 255, 255) 20%);
+        .left{
+            width: 40%;
+            .twitter{
+                display: flex;
+                padding-left: 10px;
+                .title{
+                    color: black;
+                }
+                .tag{
+                    font-size: 15px;
+                    margin-top: 7px;
+                    margin-left: 7px;
+                }
+            }
+            .twitts{
+                margin-top: 10px;
+                display: flex;
+                font-size: 15px;
+                padding-left: 10px;
+                    .img{
+                        margin-right: 10px;
+                        .circle{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background: rgb(197, 197, 197);
+                        }
+                    }
+            }
+            .next{
+                text-align: center;
+                margin-top: 10px;
+                font-size: 20px;
+                &::after{
+                    content: '>';
+                    margin-left: 5px;
+                }
+            }
+        }
+        .right{
+            border-left: 2px solid gray;
+            width: 60%;
+            font-size: 20px;
+            display: flex;
+            height: 70%;
+            align-items: center;
+            justify-content: space-evenly;
+            padding-left: 10px;
+            .card{
+                text-align: center;
+
+                .description{
+                    font-size: 17px;
+                }
+            }
+            .temp{
+                font-size: 50px;
+                &::after{
+                    content: 'O';
+                    color: rgb(49, 49, 49);
+                    font-size: 10px;
+                    position: absolute;
+                    margin-left: 2px;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+}
