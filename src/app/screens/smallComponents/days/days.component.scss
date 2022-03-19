@@ -1,0 +1,81 @@
+.days{
+    font-size: 20px;
+    display: flex;
+    align-items: flex-start;           
+     justify-content: space-evenly;
+    padding-left: 10px;
+    }
+.card{
+    text-align: center;
+    animation: blur 3.0s forwards ;
+    opacity: 0;
+
+    cursor: default !important;
+    transition: 0.5s;
+    .img{
+        transition: 0.5s;
+
+    }
+    .description{
+        font-size: 17px;
+    }
+    .temp{
+        font-size: 40px;
+        &::after{
+            content: 'o';
+            color: rgb(49, 49, 49);
+            font-size: 15px;
+            position: absolute;
+            margin-left: 2px;
+            margin-top: 0px;
+        }
+    }
+    &:hover{
+        transform: scale(1.05);
+        color: black;
+        img{
+            animation: rotateX linear 1.5s infinite alternate;
+        }
+        .description,.temp,.day{
+            filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.150));
+        }
+    }
+}
+
+.first{
+    animation-delay: 0s !important;
+}
+.sec{
+    animation-delay: 0.5s !important;
+}
+.therd{
+    animation-delay: 1s !important;
+}
+
+@media only screen and(max-width: 1000px) {
+    .card{
+        .temp{
+            font-size: 25px !important;
+        }.description,.day{
+            font-size: 10px !important;
+        }
+    }
+}
+@media only screen and(max-width: 500px) {
+
+    .temp{
+        font-size: 30px !important;
+
+    }
+    .description{
+        font-size: 10px !important;
+    }
+    .day{
+        font-size: 13px;
+    }
+    .card{
+        .temp{
+         font-size: 20px !important;   
+        }
+    }
+}

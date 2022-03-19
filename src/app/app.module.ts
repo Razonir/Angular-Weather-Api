@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { WeatherCardComponent } from './screens/weather-card/weather-card.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { BodyComponent } from './layout/body/body.component';
+import { DaysComponent } from './screens/smallComponents/days/days.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherCardComponent,
     HeaderComponent,
-    BodyComponent
+    BodyComponent,
+    DaysComponent
   ],
   imports: [
     BrowserModule,
