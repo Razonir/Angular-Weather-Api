@@ -16,7 +16,7 @@ export class DaysComponent implements OnInit {
   weather:any;
   location:any;
   ip:any;
-  city:any;
+  city:any = "api not working properly";
   constructor(private weatherApi:WeatherApiService , private locationService:LocationService) {
 
     this.locationService.getIPAddress().subscribe(ip=>{
