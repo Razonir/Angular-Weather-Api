@@ -4,6 +4,8 @@
     margin: 50px auto;
     width: 1000px;
     border-radius: 12px;
+    animation: blurscale linear 0.5s ;
+
     transition: 0.5s;
     height: 500px;
     filter: drop-shadow(0 30px 20px rgba(0, 0, 0, 0.1));
@@ -20,6 +22,7 @@
     }
     @media only screen and(max-width: 500px) {
         width: 95%;
+
         .top{
             align-items: center  !important;
             align-content: center !important;
@@ -54,6 +57,7 @@
 
         }
         .right{
+            width: 100% !important;
             .temp{
                 font-size: 30px !important;
         
@@ -64,6 +68,11 @@
             .day{
                 font-size: 13px;
             }
+            .card{
+                .temp{
+                 font-size: 20px !important;   
+                }
+            }
         }
     }
     .top{
@@ -72,6 +81,7 @@
         background-image: url(/assets/back.png);
         background-size: cover;
         border-radius: 12px 12px 0 0;
+        
         border-bottom: 15px solid rgb(26, 20, 61);
         display: flex;
         align-items: flex-end;
@@ -79,14 +89,18 @@
             display: table-cell;
             vertical-align: bottom;
             width: 50%;
+            animation: blur linear 1.5s ;
+
             text-align: center;
             color: white;
             .temp{
                 font-size: 72px;
                 transform: translateX(-5px);
                 filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.288));
+                animation: blur linear 2.5s ;
+
                 &::after{
-                    content: 'O';
+                    content: 'o';
                     color: white;
                     font-size: 25px;
                     position: absolute;
@@ -129,6 +143,7 @@
             margin-bottom: 180px;
             display: flex;
             color: white;
+            animation: blur linear 2.5s ;
             flex-direction: column;
             align-items: center;
             .city{
@@ -177,6 +192,8 @@
                 display: flex;
                 font-size: 15px;
                 padding-left: 10px;
+                animation: blur linear 1.5s ;
+
                     .img{
                         margin-right: 10px;
                         .circle{
@@ -210,10 +227,14 @@
             display: flex;
             height: 70%;
             align-items: flex-start;           
+
              justify-content: space-evenly;
             padding-left: 10px;
             .card{
                 text-align: center;
+                animation: blur 3.0s forwards ;
+                opacity: 0;
+
                 cursor: default !important;
                 transition: 0.5s;
                 .img{
@@ -224,14 +245,14 @@
                     font-size: 17px;
                 }
                 .temp{
-                    font-size: 50px;
+                    font-size: 40px;
                     &::after{
-                        content: 'O';
+                        content: 'o';
                         color: rgb(49, 49, 49);
-                        font-size: 10px;
+                        font-size: 15px;
                         position: absolute;
                         margin-left: 2px;
-                        margin-top: 4px;
+                        margin-top: 0px;
                     }
                 }
                 &:hover{
@@ -252,10 +273,29 @@
         filter: drop-shadow(0 30px 20px rgba(0, 0, 0, 0.250));
     }
 }
+.first{
+    animation-delay: 0s !important;
+}
+.sec{
+    animation-delay: 0.5s !important;
+}
+.therd{
+    animation-delay: 1s !important;
+}
 @keyframes rotateX {
     0% {transform: rotate(0deg) scale(1);}
     33% {transform: rotate(10deg) scale(1.2) translateY(5px); }
     66% {transform: rotate(-10deg) scale(1.2) translateY(2px); }
     100% {transform: rotate(0deg) scale(1);}
+  }
+  
+  @keyframes blur {
+    0% {filter: blur(100px); opacity: 0;}
+    100% {filter: blur(0); opacity: 1;}
+  }
+  
+  @keyframes blurscale {
+    0% {transform: scale(0); filter: blur(100px); opacity: 0;}
+    100% {transform: scale(1); filter: blur(0); opacity: 1;}
   }
   

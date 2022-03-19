@@ -40,21 +40,19 @@
         <div class="next"><a target="_blank" href="https://twitter.com/search?q=%23frontend&src=typed_query&f=top">More</a></div>
       </div>
       <div class="right">
-        <div class="card">
+        <div class="card first">
           <div class="day">
             Today
           </div>
           <div class="img">
-            <img width="60" src=" {{weather.forecast.forecastday[0].day.condition.icon}}" alt="">
+            <img width="60" src="{{weather.current.condition.icon}}" alt="">
           </div>
-          <div class="temp">
-            {{weather.forecast.forecastday[0].day.avgtemp_c}}
-          </div>
-          <div class="description">
-            {{weather.forecast.forecastday[0].day.condition.text}}
+          <div class="temp">{{weather.current.temp_c}}
+                   </div>
+          <div class="description">{{weather.current.condition.text}}
           </div>
         </div>
-        <div class="card">
+        <div class="card sec">
           <div class="day">
             Tomorrow
           </div>
@@ -67,7 +65,7 @@
             {{weather.forecast.forecastday[1].day.condition.text}}
           </div>
         </div>
-        <div class="card">
+        <div class="card therd">
           <div class="day">
             TDAT
           </div>
@@ -84,5 +82,3 @@
         </div>
     </div>
 </div>
-
-
