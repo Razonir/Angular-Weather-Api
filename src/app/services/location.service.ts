@@ -12,11 +12,11 @@ export class LocationService {
 
   public getIPAddress()  
   {  
-    return this.http.get("http://api.ipify.org/?format=json");  
+    return this.http.get("https://api.ipify.org/?format=json");  
   }  
 
   getLocation(ip:any){
-    let url="http://ipinfo.io/"+ip+"?token=e7105efd1ac072";
+    let url="https://ipinfo.io/"+ip+"?token=e7105efd1ac072";
     return this.http.get(url);
   }
 
